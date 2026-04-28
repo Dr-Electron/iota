@@ -37,6 +37,7 @@ jobs:
           mkdir -p ${{ env.TMP_BUILD_DIR }}
           tar -xvzf ./tmp/${{ steps.artifact.outputs.artifact_name }}.tgz -C ${{ env.TMP_BUILD_DIR }}
 
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
       - name: Create LICENSE copy for chocolatey files list
         shell: bash
         run: |
