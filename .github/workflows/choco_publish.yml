@@ -27,6 +27,8 @@ jobs:
         shell: bash
         run: |
           curl -L -o ./tmp https://github.com/iotaledger/iota/releases/download/${{ inputs.iota_tag }}/${{ steps.artifact.outputs.artifact_name }}.tgz
+          ls
+          ls ./tmp
 
       - name: Extract Windows artifact
         shell: bash
