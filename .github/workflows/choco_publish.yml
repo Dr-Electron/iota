@@ -26,7 +26,8 @@ jobs:
       - name: Download Windows artifact
         shell: bash
         run: |
-          curl -L -o ./tmp https://github.com/iotaledger/iota/releases/download/${{ inputs.iota_tag }}/${{ steps.artifact.outputs.artifact_name }}.tgz
+          mkdir ./tmp
+          curl -L -o ./tmp/${{ steps.artifact.outputs.artifact_name }}.tgz https://github.com/iotaledger/iota/releases/download/${{ inputs.iota_tag }}/${{ steps.artifact.outputs.artifact_name }}.tgz
           ls
           ls ./tmp
 
