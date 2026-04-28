@@ -40,6 +40,7 @@ jobs:
       - name: Create LICENSE copy for chocolatey files list
         shell: bash
         run: |
+          ls
           cp LICENSE ./tmp/LICENSE.txt
 
       - name: Publish Windows iota binary to Chocolatey
